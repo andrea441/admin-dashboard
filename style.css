@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 4fr;
+
+  height: 100%;
+}
+
+.header {
+  grid-column: 2;
+  padding: 15px 50px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  font-weight: bold;
+}
+
+.header svg {
+  width: 25px;
+  height: 25px;
+}
+
+.header .search-bar {
+  padding-right: 10px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+}
+
+.search-bar input {
+  border-radius: 50px;
+  background-color: lightgrey;
+  height: 30px;
+  border: none;
+}
+
+.header .user-info {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-picture.small {
+  width: 50px;
+  height: auto;
+}
+
+.header .user-greeting {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.profile-picture.big {
+  grid-row: 1 / span 2;
+  width: 80px;
+  height: auto;
+}
+
+.header .header-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 40px;
+}
+
+.header-buttons button {
+  border-radius: 50px;
+  background-color: dodgerblue;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 50px;
+
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.sidebar .logo {
+  font-size: 22px;
+}
+
+.sidebar ul {
+  display: grid;
+  font-size: 18px;
+  row-gap: 16px;
+}
+
+.sidebar li,
+.sidebar .logo {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.sidebar svg {
+  justify-self: center;
+  fill: white;
+}
+
+.logo svg {
+  width: 45px;
+  height: 45px;
+}
+
+.sidebar ul svg {
+  width: 25px;
+  height: 25px;
+}
+
+.main-content {
+  grid-column: 2;
+
+  background-color: lightgray;
+}
