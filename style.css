@@ -6,7 +6,7 @@
 
 body {
   min-height: 100vh;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 li {
@@ -70,6 +70,12 @@ li {
 .header .user-greeting {
   display: grid;
   grid-template-columns: auto 1fr;
+  column-gap: 20px;
+}
+
+.user-greeting .greeting {
+  font-size: 14px;
+  align-self: end;
 }
 
 .profile-picture.big {
@@ -146,5 +152,44 @@ li {
 .main-content {
   grid-column: 2;
 
+  display: grid;
+  grid-template-columns: 3fr 1fr;
   background-color: lightgray;
+  padding: 20px 20px 50px;
+  gap: 25px;
+}
+
+.card svg {
+  width: 20px;
+  height: auto;
+}
+
+.main-content .projects {
+  grid-row: 1 / span 2;
+}
+
+.projects,
+.announcements,
+.trending {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 10px;
+}
+
+.projects .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.cards .card {
+  background-color: white;
+  border-radius: 10px;
+  border-left: 8px solid orange;
+}
+
+.side-card {
+  background-color: white;
+  border-radius: 10px;
 }
