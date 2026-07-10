@@ -163,8 +163,13 @@ li {
   gap: 25px;
 }
 
+.main-content h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
 .card svg {
-  width: 20px;
+  width: 30px;
   height: auto;
 }
 
@@ -191,12 +196,31 @@ li {
   background-color: white;
   border-radius: 10px;
   border-left: 8px solid orange;
+  padding: 30px 20px 30px;
+  display: grid;
+  grid-template-rows: auto 3fr 1fr;
+}
+
+.card .card-icons {
+  display: inline-grid;
+  gap: 20px;
+  grid-auto-flow: column;
+  grid-auto-rows: repeat(3, auto);
+  justify-self: end;
+}
+
+.card h4 {
+  font-size: 18px;
+}
+
+.card p {
+  color: var(--secondary-font-color);
 }
 
 .side-card {
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   display: grid;
   grid-auto-rows: 1fr;
 }
@@ -224,6 +248,12 @@ li {
 .side-card-section p {
   font-size: 12px;
   color: var(--secondary-font-color);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .user-profile img {
